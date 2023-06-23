@@ -1,0 +1,5 @@
+SELECT Categories.CategoryName Kategori, count(*) Miktar
+FROM Products inner join Categories
+on Products.CategoryID = Categories.CategoryID
+group by Categories.CategoryId
+order by Miktar;

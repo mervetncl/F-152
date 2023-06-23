@@ -1,0 +1,50 @@
+kodlama : Adem
+
+ui : merve & ayşe
+ 
+project management : merve & ayşe
+
+
+fikir : Parket
+ui : ana ekran : map(benim konumum işaretli) etrafında en yakın park alanları var(levha(üstünde fiyat))
+levha tıklandı : park alanı ile ilgili bilgiler :
+	1 foto
+    park alanı adı
+
+   1 saat ücret 
+   2 ..........
+     öde button
+    favorile button
+
+öde button -> new screen
+ad soyad
+kart no
+cvv
+son kullanma tarihi
+öde button
+
+	giriş
+email
+pass
+giriş yap button
+kaydol button
+
+	kaydol 
+ad soyad
+email
+pass
+kaydol button
+
+favoriler (listeleme)
+
+park foto fiyat ad
+park foto fiyat ad
+park foto fiyat ad
+
+
+
+
+kodlama -> ui
+kodlama backend -> firebase
+test
+store
