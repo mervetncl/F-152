@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:parket/app/app.router.dart';
 import 'package:parket/app/app_base_view_model.dart';
 import 'package:parket/core/di/get_it.dart';
@@ -11,12 +10,9 @@ class ParkEt extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations(
-        <DeviceOrientation>[DeviceOrientation.portraitUp]);
-
     return ViewModelBuilder<AppBaseViewModel>.reactive(
         viewModelBuilder: () => getIt.get<AppBaseViewModel>(),
-        onModelReady: (viewModel) => viewModel.initialise(),
+        onViewModelReady: (viewModel) => viewModel.initialise(),
         builder: (context, viewModel, child) => MaterialApp(
           navigatorKey: StackedService.navigatorKey,
           onGenerateRoute: StackedRouter().onGenerateRoute,

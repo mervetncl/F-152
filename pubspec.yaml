@@ -15,6 +15,9 @@ dependencies:
   #UI
   sliding_up_panel: ^2.0.0+1
   google_maps_flutter: ^2.3.1
+  geolocator: ^8.2.0
+  geocoding: ^2.0.4
+  fluttertoast: ^8.2.2
 
   #DI
   get_it: ^7.6.0
