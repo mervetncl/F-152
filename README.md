@@ -1,22 +1,48 @@
 # F-152
-Sprint 2
-•	Sprint içinde tamamlanması tahmin edilen puan: 120 Puan
-•	Daily Scrum: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp ve Discord üzerinden üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak  tarafımızdan paylaşılmaktadır: Sprint 2 Daily Scrum Chats
-•	Sprint board update: Sprint board screenshotları: 
-![image](https://github.com/mervetncl/F-152/assets/132881093/cd4b19a8-bb0c-4b09-8407-adfd630d6334)
+# Takım İsmi
 
-https://miro.com/app/board/uXjVM5wUM-A=/
- 
-https://miro.com/app/board/uXjVM5wUM-A=/
-•	Ürün Durumu: Ekran görüntüleri: 
-![WhatsApp Image 2023-07-03 at 22 51 34](https://github.com/mervetncl/F-152/assets/132881093/a9577867-2a62-4713-84b4-5c58fe5494f8)
-![WhatsApp Image 2023-07-03 at 22 51 34 (1)](https://github.com/mervetncl/F-152/assets/132881093/163cf10f-7641-48a0-9ff1-477acfaa4844)
+Takım Flutter 152
+
+# Ürün İle İlgili Bilgiler
+
+# Takım Elemanları
+•	Adem ÖZALP: Product Owner / Developer
+
+•	Ayşe ERDOĞAN :  Scrum Master/Developer
+
+•	Merve Nur TUNÇEL: Scrum Master
+
+•	Süleyman AYGÜN: Developer
+
+•	Ahmet : Aktif olmayan üye 
+
+# Ürün İsmi
+
+--ParkEt--
+# Product Backlog URL
+https://github.com/mervetncl/F-152 
+
+# Ürün Açıklaması
+
+ParkEt, kullanıcılarına uygun park alanına erişimi sağlar .Özellikle büyük şehirlerde yaşanan park alanı bulma sıkıntısına çözüm imkanı sunar.Park alanlarına hızlı ve güvenilir erişim sağlarken görsel destekli oluşu kullanıcılarına kolaylık sağlar.Uygulamının bir diğer fonksiyonu ise park alanlarının mülkiyete açık oluşu .Park alanına sahip kullanıcılar ticari amaçla bu alanları kiraya açık hale getirebilir ve buradan gelir elde edebilir.   
+•	Uygulama birincil fonksiyonu: Kullanıcılarına güvenli kolay hızlı park alanı erişimi sağlaması
+
+•	Uygulama ikincil fonksiyonu:İkincil gelir kaynağı oluşturmak
 
 
-Sprint Review: Alınan kararlar: Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. Sprint Review katılımcıları: Ayşe ERDOĞAN ,Adem ÖZALP, Merve Nur TUNÇEL ,Süleyman AYGÜN  
 
 
-•	Sprint Retrospective:
-o	Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+# Ürün Özellikleri
+•	Kullanıcılarına harita destekli uygun park alanı erişimi
+
+•	İkincil gelir kaynağı oluşturmak
+
+# Hedef Kitle
+•	Sürücü
+
+• İkincil gelir kaynağı oluşturmak isteyen kimseler
+
+# Juriye Not
+
 
 
