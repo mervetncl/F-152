@@ -5,9 +5,24 @@ class Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text("Splash View"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Image.asset('assets/parkicon.png'),
+            const Text(
+              "Park Et",
+              style: TextStyle(
+                fontSize: 40,
+                color: Colors.blue,
+                fontWeight: FontWeight.w700,
+                fontStyle: FontStyle.italic,
+                overflow: TextOverflow.ellipsis,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

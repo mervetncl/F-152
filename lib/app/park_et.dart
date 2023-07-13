@@ -14,6 +14,7 @@ class ParkEt extends StatelessWidget {
         viewModelBuilder: () => getIt.get<AppBaseViewModel>(),
         onViewModelReady: (viewModel) => viewModel.initialise(),
         builder: (context, viewModel, child) => MaterialApp(
+          theme: ThemeData(primarySwatch: Colors.blueGrey),
           navigatorKey: StackedService.navigatorKey,
           onGenerateRoute: StackedRouter().onGenerateRoute,
           navigatorObservers: [StackedService.routeObserver],
@@ -22,3 +23,4 @@ class ParkEt extends StatelessWidget {
         ));
   }
 }
+

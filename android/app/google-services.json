@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407830518892",
+    "project_id": "parketflutter",
+    "storage_bucket": "parketflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407830518892:android:e3f8f7d2513d3b31c20c49",
+        "android_client_info": {
+          "package_name": "com.example.parket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407830518892-6inqm1np0v3m6q0l480ivc002icidvj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChHEX-8HfA4S_fP9_KjHGpvND_YroNcro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407830518892-6inqm1np0v3m6q0l480ivc002icidvj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
