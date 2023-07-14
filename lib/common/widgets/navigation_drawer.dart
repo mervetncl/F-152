@@ -36,14 +36,17 @@ class NavigationDrawerWidget extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.location_on),
               title: const Text("Favori İlanlarım"),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                model.navigationService.navigateTo(Routes.favoriView);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.login),
               title: const Text("Satıcı Girişi"),
               onTap: () async {
                 Navigator.pop(context);
-                var currentUser = await FirebaseAuth.instance.currentUser;
+                var currentUser = FirebaseAuth.instance.currentUser;
                 if (currentUser != null) {
                   model.navigationService.navigateTo(Routes.saticiHomeView);
                 } else {

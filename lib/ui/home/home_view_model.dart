@@ -3,8 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:parket/app/app_base_view_model.dart';
 import 'package:parket/core/models/otopark.dart';
+import 'package:parket/core/models/park.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class HomeViewModel extends AppBaseViewModel {
@@ -22,7 +24,30 @@ class HomeViewModel extends AppBaseViewModel {
   final CameraPosition kGoogle =
       const CameraPosition(target: LatLng(39.9029099, 32.4331094), zoom: 7);
 
-  Future<void> init() async {}
+  Future<void> init() async {
+    try{
+      await Hive.openBox('favoured');
+      repository.setFavouredMeals(Hive.box('favoured'));
+      notifyListeners();
+    }catch(e){
+      print(e);
+    }
+
+  }
+  setFavourite(Otopark otopark)  {
+    if (favorite!.containsKey(otopark.ad)) {
+      favorite!.delete(otopark.ad);
+    } else {
+      Park park = Park();
+      park.ad = otopark.ad;
+      park.ucret = otopark.ucret;
+      park.kapasite = otopark.kapasite;
+
+      favorite!.put(otopark.ad, park);
+      repository.setFavouredMeals(favorite!);
+    }
+    notifyListeners();
+  }
 
   Future<Otopark?> getParkSpaces() async {
     markers = {};
@@ -76,4 +101,6 @@ class HomeViewModel extends AppBaseViewModel {
     });
     return await Geolocator.getCurrentPosition();
   }
+
+
 }

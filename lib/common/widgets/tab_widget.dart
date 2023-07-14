@@ -109,12 +109,14 @@ class _TabWidgetState extends State<TabWidget> {
                           "Yol Tarifi",
                           style: TextStyle(color: Colors.white),
                         )),
-                    ElevatedButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Favorile",
-                          style: TextStyle(color: Colors.white),
-                        )),
+                    IconButton(
+                        onPressed: () {
+                            model.setFavourite(widget.otopark);
+                        },
+                        icon:model.favorite!.containsKey(widget.otopark.ad)
+                            ? const Icon(Icons.favorite)
+                            : const Icon(Icons.favorite_border),
+                      ),
                     const Padding(padding: EdgeInsets.only(bottom: 10)),
                   ],
                 ),

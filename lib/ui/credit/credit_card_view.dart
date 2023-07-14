@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:parket/app/app.router.dart';
+import 'package:parket/common/constants/colors.dart';
 import 'package:parket/ui/credit/credit_card_view_model.dart';
 import 'package:stacked/stacked.dart';
 
@@ -12,6 +14,7 @@ class CreditCardPage extends StatefulWidget {
 }
 
 class _CreditCardPageState extends State<CreditCardPage> {
+  final textFormKey = GlobalKey<FormState>();
   String cardNumber = '';
   String expiryDate = '';
   String cardHolderName = '';
@@ -82,9 +85,36 @@ class _CreditCardPageState extends State<CreditCardPage> {
                                 hintText: 'xxx'),
                             cardHolderDecoration: const InputDecoration(
                               border: OutlineInputBorder(),
-                              labelText: 'Kart Kaydet',
+                              labelText: 'Kart Üzerindeki İsim',
                             ),
                           ),
+                          const Padding(padding: EdgeInsets.only(bottom: 12)),
+                          SizedBox(
+                            width: 330,
+                            child: Form(
+                              key: textFormKey,
+                              child: TextFormField(
+                                controller: model.plakaController,
+                                style: const TextStyle(color: academyBlack),
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  labelText: 'Otopark Adı',
+                                ),
+                                validator: (value) {
+                                  if (value != null) {
+                                    if (value.isEmpty) {
+                                      return "Boş bırakılamaz";
+                                    } else {
+                                      return null;
+                                    }
+                                  } else {
+                                    return "Null olamaz";
+                                  }
+                                },
+                              ),
+                            ),
+                          ),
+                          const Padding(padding: EdgeInsets.only(bottom: 5)),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
@@ -105,9 +135,20 @@ class _CreditCardPageState extends State<CreditCardPage> {
                             ),
                             onPressed: () {
                               if (formKey.currentState!.validate()) {
-                                print('valid');
+                                  // go to ödendi sayfa
+                                var valid = formKey.currentState?.validate();
+                                if(valid == true){
+                                  model.navigationService.navigateTo(Routes.thankYouPage);
+                                }
                               } else {
-                                print('inValid');
+                                Fluttertoast.showToast(
+                                    msg: "Kart Bilgilerinizi Doğru Girdiğinizden Emin Olun",
+                                    toastLength: Toast.LENGTH_SHORT,
+                                    gravity: ToastGravity.CENTER,
+                                    timeInSecForIosWeb: 1,
+                                    backgroundColor: Colors.red,
+                                    textColor: Colors.white,
+                                    fontSize: 16.0);
                               }
                             },
                           )

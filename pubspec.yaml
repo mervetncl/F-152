@@ -46,6 +46,10 @@ dependencies:
   stacked: ^3.4.1
   stacked_services: ^1.1.1
 
+  # DB
+  hive: ^2.2.3
+  hive_flutter: ^1.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -62,4 +66,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/parkicon.png
+    - assets/card.png
 
