@@ -13,7 +13,7 @@ class ListViewModel extends AppBaseViewModel {
     notifyListeners();
   }
 
-  Future<Otopark?> getParkSpace() async {
+   getParkSpace() async {
     var currentUser = FirebaseAuth.instance.currentUser?.email;
     var future = await FirebaseFirestore.instance
         .collection("otoparklar")
@@ -21,8 +21,8 @@ class ListViewModel extends AppBaseViewModel {
         .get();
 
     var map = future.docs.map((e) => Otopark.fromSnapshot(e));
-    map.forEach((element) {
+    for (var element in map) {
       myOtoparkSpaces.add(element);
-    });
+    }
   }
 }

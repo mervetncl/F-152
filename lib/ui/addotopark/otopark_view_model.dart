@@ -84,6 +84,7 @@ class OtoparkViewModel extends AppBaseViewModel {
               textColor: Colors.white,
               fontSize: 16.0);
           return const OtoparkListView();
+        // ignore: body_might_complete_normally_catch_error
         }).catchError((error) {
           Fluttertoast.showToast(
               msg: error,
