@@ -21,6 +21,7 @@ Takım Flutter 152
 --ParkEt--
 # Product Backlog URL
 https://github.com/mervetncl/F-152 
+https://miro.com/app/board/uXjVM1uDj_M=/
 
 # Ürün Açıklaması
 
