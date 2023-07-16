@@ -8,7 +8,7 @@ Takım Flutter 152
 # Takım Elemanları
 •	Adem ÖZALP: Product Owner / Developer
 
-•	Ayşe ERDOĞAN :  Scrum Master/Developer
+•	Ayşe ERDOĞAN :  Scrum Master
 
 •	Merve Nur TUNÇEL: Scrum Master
 
